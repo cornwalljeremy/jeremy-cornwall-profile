@@ -12,9 +12,9 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        {/* <NavLink to='/'>
-          <img src={require('../../images/logo.svg')} alt='logo' />
-        </NavLink> */}
+         <NavLink to='/'>
+          Jeremy Cornwall
+        </NavLink> 
         <Bars />
         <NavMenu>
           <NavLink to='/about' activeStyle>
@@ -27,14 +27,14 @@ const Navbar = () => {
             Contact Me
           </NavLink>
           <NavLink to='/sign-up' activeStyle>
-            Sign In
+            Sign Up
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
-        <NavBtn>
+        {/* <NavBtn>
           <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
+        </NavBtn> */}
       </Nav>
     </>
   );
