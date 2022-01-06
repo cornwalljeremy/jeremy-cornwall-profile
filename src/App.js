@@ -1,19 +1,25 @@
-import "./App.css";
-import Nav from "./components/Nav/Nav";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages';
+import About from './pages/about';
+import Services from './pages/services';
+import Contact from './pages/contact';
+import SignUp from './pages/signup';
 
 function App() {
   return (
-    <div className='navBar'>
-      <Nav />
-      <div className='App'>
-        <h1>Welcome to my Homepage</h1>
-        <img
-          src={require("./pictures/Stars2020-1.jpg")}
-          height={400}
-          alt='look at all the stars'
-        />
-      </div>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/photos' component={Services} />
+        <Route path='/contact-me' component={Contact} />
+        <Route path='/sign-up' component={SignUp} />
+      </Switch>
+    </Router>
   );
 }
 
